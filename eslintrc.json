@@ -1,0 +1,18 @@
+{
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:prettier/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "plugins": ["react", "@typescript-eslint"],
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "node": true
+    },
+    "rules": {
+        "@typescript-eslint/no-unused-vars": "off"
+    }
+}
