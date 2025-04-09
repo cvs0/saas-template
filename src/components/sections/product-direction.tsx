@@ -23,7 +23,7 @@ const ProductDirection = () => {
       <BlurFade inView>
         <div className="flex flex-col">
           <div className="lg:px-10 xl:px-20">
-            <div className="flex flex-col lg:flex-row items-start px-10 text-start lg:text-center">
+            <div className="flex flex-col lg:flex-row items-start lg:justify-center lg:items-center px-10 text-start lg:text-center">
               {" "}
               <Link href="#" className="group">
                 <div className="flex items-center mb-4">
@@ -39,7 +39,7 @@ const ProductDirection = () => {
                 </h2>
               </Link>
             </div>
-            <div className="flex flex-col lg:flex-row lg:justify-start lg:items-center px-10 items-start gap-16 text-start">
+            <div className="flex flex-col lg:flex-row lg:justify-center lg:items-center px-10 items-start gap-16 text-start lg:mr-[18em]">
               <p className="text-gray-400 text-lg max-w-[440px] lg:max-w-[400px] sm:mb-[-200px] z-20 relative">
                 {" "}
                 <span className="text-white">
