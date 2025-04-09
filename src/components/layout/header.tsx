@@ -73,18 +73,22 @@ export function Header() {
           </nav>
 
           <div className="flex items-center gap-4">
-            <Link
-              href="#"
-              className="hidden md:block text-sm text-gray-400 hover:text-white transition-colors"
-            >
-              Log in
-            </Link>
-            <Link
-              href="#"
-              className="rounded-md bg-white px-4 py-2 text-sm font-medium text-black hover:bg-gray-200 transition-colors"
-            >
-              Sign up
-            </Link>
+            {!isMenuOpen && (
+              <>
+                <Link
+                  href="#"
+                  className="text-sm text-gray-400 hover:text-white transition-colors"
+                >
+                  Log in
+                </Link>
+                <Link
+                  href="#"
+                  className="rounded-md bg-white px-4 py-2 text-sm font-medium text-black hover:bg-gray-200 transition-colors"
+                >
+                  Sign up
+                </Link>
+              </>
+            )}
 
             {!isMenuOpen && (
               <button
@@ -115,7 +119,7 @@ export function Header() {
       >
         <div className="container mx-auto px-4 pt-4 flex justify-end">
           <button
-            className="flex items-center justify-center w-10 h-10 rounded-full bg-gray-800/80"
+            className="flex items-center justify-center w-10 h-10"
             onClick={() => setIsMenuOpen(false)}
             aria-label="Close menu"
           >

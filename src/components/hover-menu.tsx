@@ -105,7 +105,7 @@ export function HoverMenu({ trigger, items }: HoverMenuProps) {
               />
 
               <div className="relative z-10 flex items-start">
-                <div className="mr-4 mt-1 rounded-md bg-transparent backdrop-blur-2xl p-2 transition-all duration-200">
+                <div className="mr-4 mt-1 rounded-md bg-black/95 backdrop-blur-2xl p-2 transition-all duration-200">
                   {item.icon}
                 </div>
 
