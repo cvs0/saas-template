@@ -26,7 +26,6 @@ export function HoverMenu({ trigger, items }: HoverMenuProps) {
   const menuRef = useRef<HTMLDivElement>(null)
   const timeoutRef = useRef<NodeJS.Timeout | null>(null)
 
-  // Handle mouse enter/leave with delay for better UX
   const handleMouseEnter = () => {
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current)
@@ -38,7 +37,7 @@ export function HoverMenu({ trigger, items }: HoverMenuProps) {
   const handleMouseLeave = () => {
     timeoutRef.current = setTimeout(() => {
       setIsOpen(false)
-    }, 100) // Small delay before closing
+    }, 100)
   }
 
   const handleMouseMove = (
@@ -62,7 +61,6 @@ export function HoverMenu({ trigger, items }: HoverMenuProps) {
     setActiveCardIndex(null)
   }
 
-  // Clean up timeout on unmount
   useEffect(() => {
     return () => {
       if (timeoutRef.current) {
@@ -89,7 +87,6 @@ export function HoverMenu({ trigger, items }: HoverMenuProps) {
               onMouseMove={(e) => handleMouseMove(e, index)}
               onMouseLeave={handleMouseLeaveCard}
             >
-              {/* Spotlight effect */}
               {activeCardIndex === index && (
                 <div
                   className="absolute w-[150px] h-[150px] rounded-full transition-all duration-100 ease-out opacity-20 pointer-events-none"
@@ -102,7 +99,6 @@ export function HoverMenu({ trigger, items }: HoverMenuProps) {
                 />
               )}
 
-              {/* Background gradient */}
               <div
                 className="absolute inset-0 opacity-10 transition-opacity duration-300 group-hover:opacity-20"
                 style={{ background: item.gradient }}

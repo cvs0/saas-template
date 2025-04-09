@@ -56,7 +56,6 @@ export default function CustomerShowcase() {
             </div>
           </div>
 
-          {/* Pill button that appears on hover */}
           <div
             className={`absolute left-1/2 top-1/2 -translate-x-1/2 translate-y-1/2 transition-all duration-300 ${
               isHovered
